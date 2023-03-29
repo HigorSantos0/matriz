@@ -1,36 +1,36 @@
-/*Fazer uma função que, dada uma matriz M6×6,
-determine se ela é simétrica.
+/*Fazer uma funÃ§Ã£o que, dada uma matriz M6Ã—6,
+determine se ela Ã© simÃ©trica.
 */
 /*
 	FAETERJ-Rio
-	FPR - Manhã - Professor Leonardo Vianna
+	FPR - ManhÃ£ - Professor Leonardo Vianna
 	Data: 08/09/2022
 	
-	Lista de Exercícios VI (Matrizes):
+	Lista de ExercÃ­cios VI (Matrizes):
 	
-	QUESTÃO 04:
-	Fazer uma função que, dada uma matriz M6×6, determine se ela 
-	é simétrica.
+	QUESTÃƒO 04:
+	Fazer uma funÃ§Ã£o que, dada uma matriz M6Ã—6, determine se ela 
+	Ã© simÃ©trica.
 */
 
-//importação de bibliotecas
+//importaÃ§Ã£o de bibliotecas
 #include <stdio.h>
 
-//definição de constantes
+//definiÃ§Ã£o de constantes
 #define L 3
 #define C 3
 
 #define TRUE 1
 #define FALSE 0
 
-//declaração de protótipos
+//declaraÃ§Ã£o de protÃ³tipos
 void exibir (float m[L][C]);
 int simetrica (float matriz[L][C]);
 
 //main
 void main ()
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	float matriz1[L][C] = { {1,2,3},
 	                        {2,4,5},
 	                        {3,5,6} };
@@ -42,7 +42,7 @@ void main ()
 	//exibindo a matriz 1
 	exibir (matriz1);
 	
-	//chamando a função
+	//chamando a funÃ§Ã£o
 	if (simetrica (matriz1) == TRUE)
 	{
 		printf ("\nA matriz 1 eh simetrica!\n\n");
@@ -55,7 +55,7 @@ void main ()
 	//exibindo a matriz 2
 	exibir (matriz2);
 	
-	//chamando a função
+	//chamando a funÃ§Ã£o
 	if (simetrica (matriz2) == TRUE)
 	{
 		printf ("\nA matriz 2 eh simetrica!\n\n");
@@ -66,10 +66,10 @@ void main ()
 	}
 }
 
-//implementação das funções
+//implementaÃ§Ã£o das funÃ§Ãµes
 void exibir (float m[L][C])
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i, j;
 	
 	printf ("\nElementos da matriz:\n\n");
@@ -91,15 +91,17 @@ void exibir (float m[L][C])
 
 int simetrica (float matriz[L][C])
 {
-	//declaração de variáveis
+	//declaraÃ§Ã£o de variÃ¡veis
 	int i, j;
 	
 	//varrendo a matriz
+			//i<l-1
 	for (i=0;i<L;i++)
 	{
+			//i+1
 		for (j=0;j<C;j++)
 		{
-			//verificando se não é simétrica
+			//verificando se nÃ£o Ã© simÃ©trica
 			if (matriz[i][j] != matriz[j][i])
 			{
 				return FALSE;
